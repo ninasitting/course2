@@ -81,6 +81,8 @@
 
 ![system visualization](https://github.com/ninasitting/course2/blob/master/Screen%20Shot%202018-07-23%20at%203.46.46%20PM.png)
 
+Note: We are connecting to AWS from our local machine through the shell using our SSH key and then using tmux pointed at the same AWS to make the connection more stable like this:
 
+![shell connections](https://github.com/ninasitting/course2/blob/master/Screen%20Shot%202018-07-23%20at%204.08.05%20PM.png)
 
     
