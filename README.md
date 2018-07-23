@@ -64,5 +64,19 @@
     -v /home/ubuntu:/home/jovyan \      # mounting the volume with a two-way connection
     jupyter/datascience-notebook        # telling it to run the notebook
     
-    docker ps                           # tells us what processes are running on docker and allows us to get the 
+    docker ps                           # tells us what processes are running on docker and allows us to get the container 
+                                            id to use to obtain the tolken 
+    docker exec [<containerid>] jupyter notebook list    # will give us the token to use so no one can access our jupyter
+    
+    ** Copy the token **
+    
+#### Now in our browser
+    type "https://<publicipaddress>:443
+    paste the token in when prompted
+    
+    YAY! You did it!! (-:
+    
+
+    
+    
     
