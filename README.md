@@ -79,5 +79,5 @@
 
 ## Visualization of the System 
 
-![system visualization] (Screen%20Shot%202018-07-23%20at%203.46.46%20PM.png)
+![system visualization] (https://github.com/ninasitting/course2/blob/master/Screen%20Shot%202018-07-23%20at%203.46.46%20PM.png)
     
