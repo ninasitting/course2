@@ -2,11 +2,11 @@
 
 ## SSH Keys 
 ### In terminal/bash on local computer:
-    ls ~/.ssh                      #to see if we already have SSH keys made
-    mkdir -p .ssh                  #makes the directory for our SSH keys ( -p will prevent it from making it if it already                          
+    ls ~/.ssh                      # to see if we already have SSH keys made
+    mkdir -p .ssh                  # makes the directory for our SSH keys ( -p will prevent it from making it if it already                          
                                         exists)
-    ssh-keygen                       #remember we don't want a passprase
-    cat ~/.ssh/id_rsa.pub | pbcopy   #copying the public key of our SSH key to our clipboard so we can add it to AWS Key Pairs
+    ssh-keygen                       # remember we don't want a passprase
+    cat ~/.ssh/id_rsa.pub | pbcopy   # copying the public key of our SSH key to our clipboard so we can add it to AWS Key Pairs
     
 ## AWS Setup
 ### On the AWS website in the EC2 section
@@ -39,4 +39,30 @@
     Once it is launched, copy the public IP address in the Description section 
     
 ### Docker Installation 
-
+#### Back in terminal/bash on our local computer
+    ssh ubuntu@<ip>                          # putting in the public IP address we copied from the instance we are running
+                                             # when prompted type 'yes'
+                                             # if it says permission denied try -i ~/.ssh/id_rsa at the end of it 
+    curl -sSL https://get.docker.com | sh    # MAKE SURE YOU TYPE THIS CORRECTLY, we are telling it to download the script 
+                                                and run it immediately
+                                                
+    sudo usermod -aG docker ubuntu           # adding the ubuntu user to to the docker group
+    
+    ** type ctrl-D to disconnect so this security change can be applied when we reconnect to our AWS server **
+    
+    ssh ubuntu@<ip>                          # reconnecting 
+    tmux                                     # makes it more stable
+    
+### Obtaining and Running the Jupyter Notebook Image as a Container on our Server
+#### Still in the same terminal/bash session    
+   
+    docker pull jupyter/datascience-notebook
+    
+    docker run \                        # make sure there are no spaces after any of the backslashes
+    -d \                                # detached mode
+    -p 443:8888 \                       # telling which ports to use
+    -v /home/ubuntu:/home/jovyan \      # mounting the volume with a two-way connection
+    jupyter/datascience-notebook        # telling it to run the notebook
+    
+    docker ps                           # tells us what processes are running on docker and allows us to get the 
+    
