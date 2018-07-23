@@ -86,3 +86,12 @@ Note: We are connecting to AWS from our local machine through the shell using ou
 ![shell connections](https://github.com/ninasitting/course2/blob/master/Screen%20Shot%202018-07-23%20at%204.08.05%20PM.png)
 
     
+## Pricing
+    ** for 3 months **
+    
+    
+    t2.micro = $25.40
+    t2.small = $50.37
+    t2.medium = $101.62
+    
+    
