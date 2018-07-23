@@ -1,3 +1,4 @@
-# course2
+# Configuring a Jupyter Data Science Notebook Server
 
-## HW 
+## SSH Keys
+
