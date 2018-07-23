@@ -36,5 +36,7 @@
     
     Hit "Launch" and choose the existing Key Pair that we just imported
     
+    Once it is launched, copy the public IP address in the Description section 
     
+### Docker Installation 
 
